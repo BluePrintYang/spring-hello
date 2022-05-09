@@ -4,6 +4,7 @@ import com.yonglone.springhello.entity.User;
 import com.yonglone.springhello.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -23,7 +24,7 @@ public class UserController {
      * @return user
      */
     @RequestMapping("add")
-    public User add(User user) {
+    public User add(@RequestBody User user) {
         userService.addUser(user);
         return user;
     }

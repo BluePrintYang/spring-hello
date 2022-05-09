@@ -1,19 +1,19 @@
 package com.yonglone.springhello.entity;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
 /**
  * User entity.
  *
  */
+@Entity
+@Table(name = "tb_user")
 public class User {
 
-    /**
-     * user id
-     */
+    @Id
     private int userId;
-
-    /**
-     * username.
-     */
     private String userName;
 
     public int getUserId() {
